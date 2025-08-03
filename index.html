@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="icon" type="image/png" href="ChatGPT Image 3 Agu 2025, 21.09.02.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebebasan Finansial - Alambana Plans</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1E3A5F;
+            --secondary-dark: #2C5282;
+            --accent-gold: #B8860B;
+            --success-green: #0F5132;
+            --text-primary: #1A202C;
+            --text-secondary: #4A5568;
+            --text-light: #F7FAFC;
+            --bg-light: #FAFAFA;
+            --bg-dark: #0D1117;
+            --card-light: #FFFFFF;
+            --card-dark: #21262D;
+            --border-light: #E2E8F0;
+            --border-dark: #30363D;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(30, 58, 95, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            margin: 0;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .logo i {
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .progress-section {
+            margin-bottom: 3rem;
+        }
+
+        .progress-card {
+            background: var(--card-light);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+            transition: all 0.2s ease;
+        }
+
+        body.dark-mode .progress-card {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .progress-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .progress-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .current-amount {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.025em;
+        }
+
+        body.dark-mode .current-amount {
+            color: var(--text-light);
+        }
+
+        .target-amount {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        body.dark-mode .target-amount {
+            color: rgba(247, 250, 252, 0.7);
+        }
+
+        .progress-bar-container {
+            background: var(--border-light);
+            border-radius: 6px;
+            height: 12px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        body.dark-mode .progress-bar-container {
+            background: var(--border-dark);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary-dark));
+            border-radius: 6px;
+            transition: width 1s ease;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--card-light);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+            transition: all 0.2s ease;
+        }
+
+        body.dark-mode .stat-card {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .stat-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .stat-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        body.dark-mode .stat-icon {
+            color: var(--text-light);
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+        }
+
+        body.dark-mode .stat-value {
+            color: var(--text-light);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        body.dark-mode .stat-label {
+            color: rgba(247, 250, 252, 0.7);
+        }
+
+        .calculator-section {
+            background: var(--card-light);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .calculator-section {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+        }
+
+        body.dark-mode .section-title {
+            color: var(--text-light);
+        }
+
+        .section-title i {
+            font-size: 1.25rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            background: var(--card-light);
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .input-group input {
+            background: var(--card-dark);
+            color: var(--text-light);
+            border-color: var(--border-dark);
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        body.dark-mode .input-group input:focus {
+            border-color: var(--secondary-dark);
+        }
+
+        .btn {
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--secondary-dark);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .quote-section {
+            background: var(--primary-dark);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .quote-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .tracker-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tracker-card {
+            background: var(--card-light);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .tracker-card {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .habit-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .habit-item {
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
+        }
+
+        .habit-checkbox {
+            margin-right: 1rem;
+            transform: scale(1.2);
+        }
+
+        .habit-item.completed {
+            background: rgba(30, 58, 95, 0.05);
+            border-color: var(--primary-dark);
+        }
+
+        body.dark-mode .habit-item.completed {
+            background: rgba(44, 82, 130, 0.1);
+        }
+
+        .milestone-section {
+            background: var(--card-light);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .milestone-section {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .milestone-timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .milestone-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-light);
+            border-radius: 1px;
+        }
+
+        body.dark-mode .milestone-timeline::before {
+            background: var(--border-dark);
+        }
+
+        .milestone-item {
+            position: relative;
+            padding: 1.5rem 0 2rem 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .milestone-item::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            background: var(--card-light);
+            border: 3px solid var(--border-light);
+            border-radius: 50%;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .milestone-item::before {
+            background: var(--card-dark);
+            border-color: var(--border-dark);
+        }
+
+        .milestone-item.completed::before {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 4px rgba(30, 58, 95, 0.1);
+        }
+
+        body.dark-mode .milestone-item.completed::before {
+            background: var(--secondary-dark);
+            border-color: var(--secondary-dark);
+            box-shadow: 0 0 0 4px rgba(44, 82, 130, 0.1);
+        }
+
+        .milestone-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .milestone-item h4 {
+            color: var(--text-light);
+        }
+
+        .milestone-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        body.dark-mode .milestone-item p {
+            color: rgba(247, 250, 252, 0.7);
+        }
+
+        .milestone-item.completed h4 {
+            color: var(--primary-dark);
+        }
+
+        body.dark-mode .milestone-item.completed h4 {
+            color: var(--secondary-dark);
+        }
+
+        .calculator-result {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+        }
+
+        body.dark-mode .calculator-result {
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
+        }
+
+        .calculator-result h3 {
+            color: var(--success-green);
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .calculator-result h3 {
+            color: #4ADE80;
+        }
+
+        .calculator-result p {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        body.dark-mode .calculator-result p {
+            color: var(--text-light);
+        }
+
+        .calculator-result .highlight {
+            color: var(--accent-gold);
+            margin-top: 1rem;
+        }
+
+        body.dark-mode .calculator-result .highlight {
+            color: #FCD34D;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--card-light);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: modalSlideIn 0.3s ease;
+            position: relative;
+        }
+
+        body.dark-mode .modal-content {
+            background: var(--card-dark);
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        body.dark-mode .close-modal {
+            color: var(--text-light);
+        }
+
+        .footer {
+            background: var(--primary-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 4rem;
+        }
+
+        body.dark-mode .footer {
+            background: #0A0E13;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-section > div {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        .celebration {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            z-index: 3000;
+            animation: celebrate 2s ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes celebrate {
+            0%, 100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Financial Freedom</span>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#calculator">Kalkulator</a>
+                <a href="#tracker">Tracker</a>
+                <a href="#milestone">Milestone</a>
+                <a onclick="exportData()" style="cursor: pointer;"><i class="fas fa-download"></i> Export</a>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="dashboard" class="progress-section" style="margin-top: 2rem;">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <div>
+                            <div class="current-amount" id="currentAmount">Rp 0</div>
+                            <div class="target-amount">Target: Rp 1.000.000.000</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-chart-line stat-icon"></i>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <span id="progressPercentage">0%</span> tercapai
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-value" id="timeRemaining">0 tahun</div>
+                        <div class="stat-label">Estimasi Waktu Tersisa</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-target"></i></div>
+                        <div class="stat-value" id="monthlyTarget">Rp 0</div>
+                        <div class="stat-label">Target Menabung/Bulan</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-value" id="passiveIncome">Rp 0</div>
+                        <div class="stat-label">Passive Income Saat Ini</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="stat-value">Rp 5.000.000</div>
+                        <div class="stat-label">Target Passive Income</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quote-section">
+                <div class="quote-text" id="dailyQuote">
+                    "Kebebasan finansial bukanlah tentang menjadi kaya, tetapi tentang memiliki pilihan dalam hidup."
+                </div>
+                <div class="quote-author">- Warren Buffett</div>
+            </section>
+
+            <section id="calculator" class="calculator-section">
+                <h2 class="section-title">
+                    <i class="fas fa-calculator"></i>
+                    Kalkulator SBN Ritel
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <div class="input-group">
+                            <label>Jumlah Investasi SBN (Rp)</label>
+                            <input type="number" id="sbnAmount" placeholder="500000000" oninput="calculateSBN()">
+                        </div>
+                        <div class="input-group">
+                            <label>Yield SBN Ritel (%)</label>
+                            <input type="number" id="sbnYield" placeholder="6.5" step="0.1" oninput="calculateSBN()">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calculator-result">
+                            <h3>Hasil Simulasi:</h3>
+                            <p><strong>Passive Income per Bulan:</strong> <span id="monthlyIncome">Rp 0</span></p>
+                            <p><strong>Passive Income per Tahun:</strong> <span id="yearlyIncome">Rp 0</span></p>
+                            <p class="highlight">
+                                <strong>SBN dibutuhkan untuk 5 juta/bulan:</strong> <span id="sbnNeeded">Rp 923.076.923</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tracker" class="tracker-section">
+                <div class="tracker-card">
+                    <h3 class="section-title">
+                        <i class="fas fa-wallet"></i>
+                        Update Portfolio
+                    </h3>
+                    <div class="input-group">
+                        <label>Total Investasi Saat Ini (Rp)</label>
+                        <input type="number" id="currentSavings" placeholder="0" oninput="updateProgress()">
+                    </div>
+                    <div class="input-group">
+                        <label>Target Investasi per Bulan (Rp)</label>
+                        <input type="number" id="monthlySaving" placeholder="10000000" oninput="updateProgress()">
+                    </div>
+                    <button class="btn" onclick="saveProgress()">
+                        <i class="fas fa-save"></i> Simpan Progress
+                    </button>
+                </div>
+
+                <div class="tracker-card">
+                    <h3 class="section-title">
+                        <i class="fas fa-check-square"></i>
+                        Checklist Harian
+                    </h3>
+                    <div class="habit-item">
+                        <input type="checkbox" class="habit-checkbox" onchange="toggleHabit(this)">
+                        <span>Review performa SBN Ritel dan berita ekonomi</span>
+                    </div>
+                    <div class="habit-item">
+                        <input type="checkbox" class="habit-checkbox" onchange="toggleHabit(this)">
+                        <span>Catat dan evaluasi pengeluaran harian</span>
+                    </div>
+                    <div class="habit-item">
+                        <input type="checkbox" class="habit-checkbox" onchange="toggleHabit(this)">
+                        <span>Monitor progress investasi menuju 1 miliar</span>
+                    </div>
+                    <div class="habit-item">
+                        <input type="checkbox" class="habit-checkbox" onchange="toggleHabit(this)">
+                        <span>Identifikasi peluang penghematan dan optimasi</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="milestone" class="milestone-section">
+                <h2 class="section-title">
+                    <i class="fas fa-flag-checkered"></i>
+                    Milestone Perjalanan
+                </h2>
+                <div class="milestone-timeline">
+                    <div class="milestone-item" data-amount="50000000">
+                        <h4>Milestone 50 Juta</h4>
+                        <p>Fondasi awal perjalanan investasi</p>
+                    </div>
+                    <div class="milestone-item" data-amount="100000000">
+                        <h4>Milestone 100 Juta</h4>
+                        <p>10% dari target utama tercapai</p>
+                    </div>
+                    <div class="milestone-item" data-amount="250000000">
+                        <h4>Milestone 250 Juta</h4>
+                        <p>Passive income mulai signifikan</p>
+                    </div>
+                    <div class="milestone-item" data-amount="500000000">
+                        <h4>Milestone 500 Juta</h4>
+                        <p>Setengah perjalanan tercapai</p>
+                    </div>
+                    <div class="milestone-item" data-amount="750000000">
+                        <h4>Milestone 750 Juta</h4>
+                        <p>Mendekati kebebasan finansial</p>
+                    </div>
+                    <div class="milestone-item" data-amount="1000000000">
+                        <h4>TARGET UTAMA - 1 MILIAR</h4>
+                        <p>Kebebasan finansial tercapai - Passive income 5 juta/bulan</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="motivationModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <h2>Motivasi Harian</h2>
+            <p id="modalQuote"></p>
+            <p style="margin-top: 1.5rem; color: var(--text-secondary);">
+                <strong>Fokus pada tujuan:</strong> Mencapai passive income 5 juta per bulan melalui investasi SBN Ritel untuk kehidupan yang tenang di Jawa Tengah Khususnya Cilacap-Purwokerto.
+            </p>
+            <button class="btn" onclick="closeModal()" style="margin-top: 1.5rem;">
+                <i class="fas fa-check"></i> Tetap Fokus
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Financial Freedom Journey - Mencapai Kebebasan Finansial melalui SBN</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">
+                Investasi yang bijak adalah investasi untuk masa depan yang berkelanjutan 
+            </p>
+            <p>&copy; 2025 Alambana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let userData = {
+            currentAmount: 0,
+            monthlyTarget: 0,
+            startDate: new Date(),
+            habits: []
+        };
+
+        const motivationalQuotes = [
+            "“I always knew I was going to be rich. I don’t think I ever doubted it for a minute.”"
+        ];
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+            saveToStorage();
+        }
+
+        function updateProgress() {
+            const currentSavings = parseFloat(document.getElementById('currentSavings').value) || 0;
+            const monthlySaving = parseFloat(document.getElementById('monthlySaving').value) || 0;
+            
+            userData.currentAmount = currentSavings;
+            userData.monthlyTarget = monthlySaving;
+            
+            // Update display
+            document.getElementById('currentAmount').textContent = formatCurrency(currentSavings);
+            document.getElementById('monthlyTarget').textContent = formatCurrency(monthlySaving);
+            
+            // Update progress bar
+            const percentage = (currentSavings / 1000000000) * 100;
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressPercentage').textContent = percentage.toFixed(1) + '%';
+            
+            // Calculate time remaining
+            if (monthlySaving > 0) {
+                const remaining = 1000000000 - currentSavings;
+                const monthsRemaining = Math.ceil(remaining / monthlySaving);
+                const yearsRemaining = (monthsRemaining / 12).toFixed(1);
+                document.getElementById('timeRemaining').textContent = yearsRemaining + ' tahun';
+            }
+            
+            // Calculate current passive income (assuming 6.5% yield)
+            const currentPassiveIncome = (currentSavings * 0.065) / 12;
+            document.getElementById('passiveIncome').textContent = formatCurrency(currentPassiveIncome);
+            
+            // Update milestones
+            updateMilestones(currentSavings);
+            
+            // Check for celebration
+            checkForCelebration(currentSavings);
+        }
+
+        function calculateSBN() {
+            const amount = parseFloat(document.getElementById('sbnAmount').value) || 0;
+            const yield_rate = parseFloat(document.getElementById('sbnYield').value) || 6.5;
+            
+            const yearlyIncome = (amount * yield_rate) / 100;
+            const monthlyIncome = yearlyIncome / 12;
+            
+            document.getElementById('monthlyIncome').textContent = formatCurrency(monthlyIncome);
+            document.getElementById('yearlyIncome').textContent = formatCurrency(yearlyIncome);
+            
+            // Calculate SBN needed for 5 million/month
+            const sbnNeeded = (5000000 * 12 * 100) / yield_rate;
+            document.getElementById('sbnNeeded').textContent = formatCurrency(sbnNeeded);
+        }
+
+        function updateMilestones(currentAmount) {
+            const milestones = document.querySelectorAll('.milestone-item');
+            milestones.forEach(milestone => {
+                const targetAmount = parseFloat(milestone.dataset.amount);
+                if (currentAmount >= targetAmount) {
+                    milestone.classList.add('completed');
+                } else {
+                    milestone.classList.remove('completed');
+                }
+            });
+        }
+
+        function checkForCelebration(amount) {
+            const milestones = [50000000, 100000000, 250000000, 500000000, 750000000, 1000000000];
+            const lastAmount = userData.lastCheckedAmount || 0;
+            
+            milestones.forEach(milestone => {
+                if (amount >= milestone && lastAmount < milestone) {
+                    showCelebration();
+                }
+            });
+            
+            userData.lastCheckedAmount = amount;
+        }
+
+        function showCelebration() {
+            const celebration = document.createElement('div');
+            celebration.className = 'celebration';
+            celebration.innerHTML = '🎉🎊✨';
+            document.body.appendChild(celebration);
+            
+            setTimeout(() => {
+                document.body.removeChild(celebration);
+            }, 2000);
+        }
+
+        function toggleHabit(checkbox) {
+            const habitItem = checkbox.parentElement;
+            if (checkbox.checked) {
+                habitItem.classList.add('completed');
+            } else {
+                habitItem.classList.remove('completed');
+            }
+            saveToStorage();
+        }
+
+        function saveProgress() {
+            saveToStorage();
+            alert('Progress berhasil disimpan! 💾\n\nTerus semangat menuju kebebasan finansial! 🚀');
+        }
+
+        function showDailyMotivation() {
+            const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+            document.getElementById('modalQuote').textContent = randomQuote;
+            document.getElementById('dailyQuote').textContent = randomQuote;
+            document.getElementById('motivationModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('motivationModal').style.display = 'none';
+        }
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        function saveToStorage() {
+            const data = {
+                ...userData,
+                darkMode: document.body.classList.contains('dark-mode'),
+                habits: Array.from(document.querySelectorAll('.habit-checkbox')).map(cb => cb.checked),
+                currentSavings: document.getElementById('currentSavings').value,
+                monthlySaving: document.getElementById('monthlySaving').value,
+                sbnAmount: document.getElementById('sbnAmount').value,
+                sbnYield: document.getElementById('sbnYield').value
+            };
+            
+            // Simulate localStorage with in-memory storage
+            window.appData = data;
+        }
+
+        function loadFromStorage() {
+            if (window.appData) {
+                const data = window.appData;
+                
+                if (data.darkMode) {
+                    document.body.classList.add('dark-mode');
+                    document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+                }
+                
+                if (data.currentSavings) {
+                    document.getElementById('currentSavings').value = data.currentSavings;
+                }
+                
+                if (data.monthlySaving) {
+                    document.getElementById('monthlySaving').value = data.monthlySaving;
+                }
+                
+                if (data.sbnAmount) {
+                    document.getElementById('sbnAmount').value = data.sbnAmount;
+                }
+                
+                if (data.sbnYield) {
+                    document.getElementById('sbnYield').value = data.sbnYield;
+                } else {
+                    document.getElementById('sbnYield').value = '6.5';
+                }
+                
+                if (data.habits) {
+                    const checkboxes = document.querySelectorAll('.habit-checkbox');
+                    data.habits.forEach((checked, index) => {
+                        if (checkboxes[index]) {
+                            checkboxes[index].checked = checked;
+                            toggleHabit(checkboxes[index]);
+                        }
+                    });
+                }
+                
+                updateProgress();
+                calculateSBN();
+            } else {
+                // Set default values
+                document.getElementById('sbnYield').value = '6.5';
+                calculateSBN();
+            }
+        }
+
+        // Export data functionality
+        function exportData() {
+            const data = {
+                ...userData,
+                exportDate: new Date().toISOString(),
+                currentSavings: document.getElementById('currentSavings').value,
+                monthlySaving: document.getElementById('monthlySaving').value,
+                habits: Array.from(document.querySelectorAll('.habit-checkbox')).map(cb => cb.checked)
+            };
+            
+            const dataStr = JSON.stringify(data, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `financial_progress_${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+            
+            URL.revokeObjectURL(url);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFromStorage();
+            
+            // Show daily motivation on first visit
+            setTimeout(() => {
+                if (!window.appData || !window.appData.hasSeenMotivationToday) {
+                    showDailyMotivation();
+                    if (window.appData) {
+                        window.appData.hasSeenMotivationToday = true;
+                    }
+                }
+            }, 2000);
+            
+            // Update daily quote
+            const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+            document.getElementById('dailyQuote').textContent = randomQuote;
+        });
+
+        // Auto-save every 30 seconds
+        setInterval(saveToStorage, 30000);
+
+        // Close modal when clicking outside
+        document.getElementById('motivationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                saveProgress();
+            }
+        });
+
+        // Add floating action button for quick access
+        const fab = document.createElement('div');
+        fab.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            background: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(30, 58, 95, 0.3);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        `;
+        fab.innerHTML = '<i class="fas fa-lightbulb"></i>';
+        fab.onclick = showDailyMotivation;
+        fab.onmouseenter = function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.boxShadow = '0 4px 16px rgba(30, 58, 95, 0.4)';
+        };
+        fab.onmouseleave = function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 2px 12px rgba(30, 58, 95, 0.3)';
+        };
+        document.body.appendChild(fab);
+
+        // PWA functionality (basic)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Register service worker for offline capability
+                const swCode = `
+                    self.addEventListener('fetch', function(event) {
+                        event.respondWith(
+                            caches.match(event.request).then(function(response) {
+                                return response || fetch(event.request);
+                            })
+                        );
+                    });
+                `;
+                
+                const blob = new Blob([swCode], {type: 'application/javascript'});
+                const swURL = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swURL).then(function(registration) {
+                    console.log('SW registered successfully');
+                }).catch(function(error) {
+                    console.log('SW registration failed');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
